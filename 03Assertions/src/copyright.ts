@@ -4,7 +4,7 @@
 // year.setAttribute("datetime", thisYear);
 // year.textContent = thisYear;
 
-// 1st variation:
+// 1st variatio n:
 // let year: HTMLElement | null;
 // year = document.getElementById("year");
 // let thisYear: string;
