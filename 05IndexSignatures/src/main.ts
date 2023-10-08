@@ -34,13 +34,13 @@ const todaysNet = (transactions: TransactionObj): number => {
 
 console.log(todaysNet(todaysTransactions));
 
-// todaysTransactions.Pizza = 40 //can't access because of readonly
+// todaysTransactions.Pizza = 40 //can't access because its readonly
 
 console.log(todaysTransactions["Dave"]);
 ////////////////////////////////////////////////////////////////
 
 interface Student {
-  //   [key: string]: string | number | number[] | undefined;
+  // [key: string]: string | number | number[] | undefined;
   name: string;
   GPA: number;
   classes?: number[];
@@ -81,9 +81,10 @@ type Incomes = Record<Streams, number | string>;
 const monthlyIncomes: Incomes = {
   salary: 500,
   bonus: 100,
-  sidehustle: 250
+  sidehustle: 250,
 };
 
-for(const revenue in monthlyIncomes) {
-    console.log(monthlyIncomes[revenue as keyof Incomes]);
+for (const revenue in monthlyIncomes) {
+  console.log(monthlyIncomes[revenue as keyof Incomes]);
 }
+
