@@ -107,7 +107,7 @@ console.log(tsAssign);
 // Parameters
 
 type AssignParams = Parameters<typeof createNewAssign>;
-
+// [title: string, points: number]
 const assignArgs: AssignParams = ["Generics", 100];
 
 const tsAssign2: NewAssign = createNewAssign(...assignArgs);
@@ -136,7 +136,6 @@ const fetchUsers = async (): Promise<User[]> => {
 
 type FetchUsersReturnType = Awaited<ReturnType<typeof fetchUsers>>;
 
-fetchUsers()
-.then(users => {
-    console.log(users);
-})
+fetchUsers().then((users) => {
+  console.log(users);
+});
